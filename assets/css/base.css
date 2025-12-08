@@ -76,7 +76,7 @@ html {
 }
 
 p {
-  text-align: justify;
+  text-align: left;
 }
 
 body {
@@ -205,7 +205,7 @@ figcaption {
 .verbatim-edit {
   font-family: 'Anonymous Pro', monospace;
   font-size: var(--code_size);
-  text-align: justify;
+  text-align: left;
 }
 
 
