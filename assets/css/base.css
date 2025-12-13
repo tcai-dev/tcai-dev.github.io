@@ -5,11 +5,11 @@
 /* color comments were ~vibe coded~ */
 :root {
   /* nocturne theme */
-  --border-color:     #f9c784;  /* golden apricot */
-  --text-color:       #dcdcdc;  /* bone ivory */
-  --background-color: #17202a;  /* midnight ink */
-  --link-color:       #90caf9;  /* sky blue */
-  --accent-color:     #42a5f5;  /* deeper cerulean */
+  --border-color:     #e3a854;  /* sunset gold */
+  --text-color:       #d8dee9;  /* winter haze */
+  --background-color: #12181c;  /* midnight ink */
+  --title-color:      #7dafd9;  /* sky blue */
+  --accent-color:     #ffeead;  /* lunar halo */
 
   /* font sizes */
   --h1_text_size:     32px;
@@ -23,48 +23,48 @@ html[data-theme='jazz'] {
   --border-color:     #392682;  /* grape swirl */
   --text-color:       #2c2c44;  /* ink drop */
   --background-color: #e7e2ec;  /* paper cup */
-  --link-color:       #2A5A5A;  /* midnight sax */
+  --title-color:      #2a5a5a;  /* teal swirl */
   --accent-color:     #9c7aa6;  /* lavender mist */
 }
 
 html[data-theme='nocturne'] {
-  --border-color:     #f9c784;  /* golden apricot */
-  --text-color:       #dcdcdc;  /* bone ivory */
-  --background-color: #17202a;  /* midnight ink */
-  --link-color:       #90caf9;  /* sky blue */
-  --accent-color:     #42a5f5;  /* deeper cerulean */
+  --border-color:     #e3a854;  /* sunset gold */
+  --text-color:       #d8dee9;  /* winter haze */
+  --background-color: #12181c;  /* midnight ink */
+  --title-color:      #7dafd9;  /* sky blue */
+  --accent-color:     #ffeead;  /* lunar halo */
 }
 
 html[data-theme='outrun'] {
   --border-color:     #bb66aa;  /* neon haze */
   --text-color:       #fdf3fa;  /* sunset dust */
   --background-color: #2b1d4c;  /* midnight grid */
-  --link-color:       #6ee6e8;  /* aqua drive */
+  --title-color:      #6ee6e8;  /* aqua drive */
   --accent-color:     #f5c06a;  /* chrome glow */
 }
 
 html[data-theme='severance'] {
-  --border-color:     #000325;  /* navy ink */
-  --text-color:       #17202a;  /* midnight ink */
-  --background-color: #fffaf0;  /* creamy vanilla */
-  --link-color:       #77A8B2;  /* powder blue */
-  --accent-color:     #466699;  /* steel blue */
+  --border-color:     #000325;  /* lumon navy */
+  --text-color:       #17202a;  /* innie slate */
+  --background-color: #fffffc;  /* fluorescent cream */
+  --title-color:      #00796b;  /* mdr teal */
+  --accent-color:     #5c9fcc;  /* procedure cerulean */
 }
 
 html[data-theme='snes'] {
   --border-color:     #29004d;  /* retro amethyst */
   --text-color:       #1e1b1e;  /* espresso bean */
-  --background-color: #bbb9e0;  /* periwinkle dream */
-  --link-color:       #5a5e60;  /* asphalt gray */
-  --accent-color:     #6d597a;  /* charcoal pit */
+  --background-color: #c7c5e6;  /* periwinkle dream */
+  --title-color:      #0e0a13;  /* charcoal pit */
+  --accent-color:     #9b9ea1;  /* asphalt gray */
 }
 
 html[data-theme='tyranitar'] {
-  --border-color:     #8daa7b;  /* TYRANITAR */
-  --text-color:       #acc6d5;  /* TYRANITAR */
-  --link-color:       #3e6e90;  /* TYRANITAR */
-  --background-color: #121a21;  /* TYRANITAR */
-  --accent-color:     #d9969d;  /* TYRANITAR */
+  --border-color:     #8daa7b;  /* rock slide */
+  --text-color:       #acc6d5;  /* hidden power */
+  --title-color:      #3e6e90;  /* dragon dance */
+  --background-color: #121a21;  /* focus punch */
+  --accent-color:     #d9969d;  /* crunch */
 }
 
 
@@ -93,7 +93,7 @@ body {
 h1 {
   font-size: var(--h1_text_size);
   font-weight: 600;
-  color: var(--border-color);
+  color: var(--title-color);
   font-family: 'Montserrat', sans-serif;
   text-align: left;
   text-transform: none;
@@ -101,15 +101,17 @@ h1 {
 
 h2 {
   font-size: var(--h2_text_size);
-  font-weight: 600;
-  color: var(--accent-color);
+  font-weight: 750;
+  color: var(--border-color);
   text-align: left;
 }
 
 hr {
-  height: 0;
-  border-color: var(--text-color);
+  border: none;
+  height: 2px;
+  background-color: var(--accent-color);
   margin-top: 0.5em;
+  opacity: 1;
 }
 
 ul {
@@ -121,27 +123,31 @@ li {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--text-color);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 750;
 }
 
 a:visited {
-  color: var(--link-color);
+  color: var(--text-color);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 750;
 }
 
 a:hover {
   color: var(--accent-color);
   background-color: transparent;
   text-decoration: underline;
+  font-weight: 750;
 }
 
 a:focus {
   color: var(--accent-color);
   background-color: transparent;
   text-decoration: underline;
+  font-weight: 750;
 }
 
 figcaption {
@@ -150,7 +156,9 @@ figcaption {
   padding-top: 0.5em;
 }
 
-
+::selection {
+  background: var(--accent-color);
+}
 /*----------------------------------------------------------------------------*/
 /*  MODULES / COMPONENTS                                                      */
 /*----------------------------------------------------------------------------*/
@@ -171,6 +179,18 @@ figcaption {
   color: var(--accent-color);
 }
 
+/*.title-name {
+
+}
+
+.title-separator {
+  color: var(--accent-color);
+}
+
+.title-page {
+  color: var(--accent-color);
+}*/
+
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -181,9 +201,19 @@ figcaption {
   margin: 0;
 }
 
+.post-title a {
+  color: var(--border-color);
+}
+
+.post-title a:hover {
+  color: var(--accent-color);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .post-date {
   font-family: 'Anonymous Pro', monospace;
-  font-size: var(--h2_text_size);
+  color: var(--text-color);
 }
 
 .icon-label {
