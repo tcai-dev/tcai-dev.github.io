@@ -5,7 +5,7 @@
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-JPVSHLLH23'></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-
+      
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -41,10 +41,10 @@
         const storedTheme = localStorage.getItem('theme');
         const theme = themeModeMap[storedTheme] ? storedTheme : 'nocturne';
         const mode = themeModeMap[theme];
-
+      
         document.documentElement.setAttribute('data-theme', theme);
         document.documentElement.classList.add('no-theme-transition');
-
+      
         const syntaxLink = document.getElementById('syntax-theme');
         if (syntaxLink) {
           syntaxLink.setAttribute(
@@ -61,7 +61,7 @@
       var month = today.getMonth() + 1;
       var day = today.getDate();
       var date = month.toString().padStart(2, '0') + day.toString().padStart(2, '0');
-
+      
       function getSeason(date) {
         if (date < '0321') {
           return 'winter';
@@ -92,8 +92,7 @@
       };
     </script>
     <script type='text/javascript' id='MathJax-script' async
-      src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'>
-    </script>
+      src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll("a[href^='http']").forEach(function(link) {
@@ -102,13 +101,11 @@
         });
       });
     </script>
-    </head>
+  </head>
   <body data-theme='dark'>
     {% include navigation.html %}
     {{ content }}
     {% include footer.html %}
-
     <script src='{{ "/assets/js/theme-switcher.js" | relative_url }}'></script>
-    
   </body>
 </html>
