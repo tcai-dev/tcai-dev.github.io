@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const storedTheme = localStorage.getItem('theme');
-  const initialTheme = validThemes.includes(storedTheme) ? storedTheme : 'nocturne';
+  const initialTheme = validThemes.includes(storedTheme) ? storedTheme : 'tyranitar';
 
   themeSelect.value = initialTheme;
   setTheme(initialTheme);
