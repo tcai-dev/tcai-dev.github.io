@@ -31,15 +31,15 @@
     <script>
       (function() {
         const themeModeMap = {
+          blue_jays: 'light',
           jazz: 'light',
           nocturne: 'dark',
           outrun: 'dark',
           severance: 'light',
-          snes: 'light',
           tyranitar: 'dark',
         };
         const storedTheme = localStorage.getItem('theme');
-        const theme = themeModeMap[storedTheme] ? storedTheme : 'nocturne';
+        const theme = themeModeMap[storedTheme] ? storedTheme : 'tyranitar';
         const mode = themeModeMap[theme];
       
         document.documentElement.setAttribute('data-theme', theme);

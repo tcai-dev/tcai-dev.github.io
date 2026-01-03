@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!themeSelect || !syntaxLink) return;
 
   const themeModeMap = {
+    blue_jays: 'light',
     jazz: 'light',
     nocturne: 'dark',
     outrun: 'dark',
     severance: 'light',
-    snes: 'light',
     tyranitar: 'dark',
   };
 

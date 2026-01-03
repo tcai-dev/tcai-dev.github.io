@@ -19,12 +19,28 @@
   --code_size:        12px;
 }
 
+html[data-theme='blue_jays'] {
+  --border-color:     #1d2d5c;  /* dugout navy */
+  --text-color:       #020618;  /* umpire black */
+  --background-color: #f0fdfa;  /* dome open */
+  --title-color:      #134a8e;  /* slugger blue */
+  --accent-color:     #e8291c;  /* canada day */
+}
+
 html[data-theme='jazz'] {
   --border-color:     #392682;  /* grape swirl */
   --text-color:       #2c2c44;  /* ink drop */
   --background-color: #e7e2ec;  /* paper cup */
   --title-color:      #2a5a5a;  /* teal swirl */
   --accent-color:     #9c7aa6;  /* lavender mist */
+}
+
+html[data-theme='severance'] {
+  --border-color:     #000325;  /* lumon navy */
+  --text-color:       #17202a;  /* innie slate */
+  --background-color: #fffffc;  /* fluorescent cream */
+  --title-color:      #00796b;  /* mdr teal */
+  --accent-color:     #5c9fcc;  /* procedure cerulean */
 }
 
 html[data-theme='nocturne'] {
@@ -41,22 +57,6 @@ html[data-theme='outrun'] {
   --background-color: #2b1d4c;  /* midnight grid */
   --title-color:      #6ee6e8;  /* aqua drive */
   --accent-color:     #f5c06a;  /* chrome glow */
-}
-
-html[data-theme='severance'] {
-  --border-color:     #000325;  /* lumon navy */
-  --text-color:       #17202a;  /* innie slate */
-  --background-color: #fffffc;  /* fluorescent cream */
-  --title-color:      #00796b;  /* mdr teal */
-  --accent-color:     #5c9fcc;  /* procedure cerulean */
-}
-
-html[data-theme='snes'] {
-  --border-color:     #29004d;  /* retro amethyst */
-  --text-color:       #1e1b1e;  /* espresso bean */
-  --background-color: #c7c5e6;  /* periwinkle dream */
-  --title-color:      #0e0a13;  /* charcoal pit */
-  --accent-color:     #9b9ea1;  /* asphalt gray */
 }
 
 html[data-theme='tyranitar'] {
