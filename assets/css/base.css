@@ -159,6 +159,84 @@ figcaption {
 ::selection {
   background: var(--accent-color);
 }
+/*============================================================================*/
+/*  ADDED: MINIMAL RESET — REPLACES BOOTSTRAP REBOOT                          */
+/*  ADDED WHEN BOOTSTRAP CDN WAS REMOVED FROM _layouts/default.html           */
+/*  THESE BASELINE RULES WERE PREVIOUSLY PROVIDED BY BOOTSTRAP REBOOT         */
+/*  AND ARE NEEDED TO PREVENT BROWSER-DEFAULT MARGIN/SIZING REGRESSIONS:      */
+/*    - box-sizing: border-box  (container padding stays inside max-width)    */
+/*    - body { margin: 0 }      (removes default 8px browser margin)          */
+/*    - heading / list margins  (matches the tighter bootstrap spacing)       */
+/*============================================================================*/
+*, *::before, *::after { box-sizing: border-box; }
+
+body { margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p { margin-top: 0; margin-bottom: 1rem; }
+
+ul, ol { margin-top: 0; margin-bottom: 1rem; }
+
+figure { margin: 0 0 1rem; }
+
+/*============================================================================*/
+/*  ADDED: UTILITY CLASSES — REPLACES BOOTSTRAP UTILITIES                     */
+/*  ONLY THE BOOTSTRAP CLASSES ACTUALLY REFERENCED IN MARKUP ARE REPRODUCED.  */
+/*============================================================================*/
+/* ADDED: bootstrap's .container is RESPONSIVE — it locks to a fixed width
+   at each breakpoint and centers, rather than just capping at one max-width.
+   replicating those breakpoints exactly so the side gutters look identical. */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (min-width: 576px)  { .container { max-width: 540px;  } }
+@media (min-width: 768px)  { .container { max-width: 720px;  } }
+@media (min-width: 992px)  { .container { max-width: 960px;  } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+.d-flex { display: flex; }
+.d-block { display: block; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center { align-items: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-circle { border-radius: 50%; }
+
+/*============================================================================*/
+/*  ADDED: NAVBAR-BRAND SPACING                                               */
+/*  BOOTSTRAP PREVIOUSLY APPLIED margin-right: 1rem TO .navbar-brand BY       */
+/*  DEFAULT — THIS IS WHAT GAVE THE NAVBAR ICONS THEIR HORIZONTAL SPACING.    */
+/*  THE EXISTING ".navbar .container > div:last-child .navbar-brand:last-     */
+/*  child { margin-right: 0 }" RULE BELOW STILL WINS FOR THE LAST RIGHT-SIDE  */
+/*  ICON (HIGHER SPECIFICITY), KEEPING IT FLUSH WITH THE CONTAINER EDGE.      */
+/*============================================================================*/
+.navbar-brand { margin-right: 1rem; }
+/*============================================================================*/
+/*  END ADDED BLOCK                                                           */
+/*============================================================================*/
+
 /*----------------------------------------------------------------------------*/
 /*  MODULES / COMPONENTS                                                      */
 /*----------------------------------------------------------------------------*/
