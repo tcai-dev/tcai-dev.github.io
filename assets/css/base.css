@@ -183,6 +183,15 @@ ul, ol { margin-top: 0; margin-bottom: 1rem; }
 
 figure { margin: 0 0 1rem; }
 
+/* form controls don't inherit page font by default — bootstrap reboot used to
+   normalize this. without it, the footer's <select> falls back to the browser
+   UA font instead of Montserrat. */
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 /*============================================================================*/
 /*  ADDED: UTILITY CLASSES — REPLACES BOOTSTRAP UTILITIES                     */
 /*  ONLY THE BOOTSTRAP CLASSES ACTUALLY REFERENCED IN MARKUP ARE REPRODUCED.  */
