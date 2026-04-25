@@ -170,6 +170,11 @@ figcaption {
 /*============================================================================*/
 *, *::before, *::after { box-sizing: border-box; }
 
+/* suppress the gray tap-flash box mobile webkit/blink draws on links and
+   buttons. bootstrap reboot turned this off; without it, tapping a navbar
+   icon briefly paints an OS-level highlight before the page navigates. */
+html { -webkit-tap-highlight-color: transparent; }
+
 body { margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
